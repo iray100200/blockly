@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>Crafty blockly demo</title>
+  <link href="index.css" type="text/css" rel="stylesheet">
+  <script src="lib/blockly/blockly_compressed.js"></script>
+  <script src="lib/blockly/blocks_compressed.js"></script>
+  <script src="lib/blockly/msg/js/zh-hans.js"></script>
+  <script src="lib/blockly/javascript_compressed.js"></script>
+  <script src="lib/craftyjs/dist/crafty.js"></script>
+  <script src="lib/google-code-prettify/bin/prettify.min.js"></script>
+  <link href="lib/google-code-prettify/bin/prettify.min.css" type="text/css" rel="stylesheet">
+  <link href="lib/google-code-prettify/styles/desert.css" type="text/css" rel="stylesheet">
+  <script src="lib/babel-core/browser.js"></script>
+</head>
+
+<body>
+  <div class="root">
+    <div class="canvas-container">
+      <div id="canvasContext"></div>
+      <div class="exec">
+        <button id="run">运行</button>
+      </div>
+    </div>
+    <div class="blockly">
+      <div id="blocklyArea">
+        <div id="blocklyDiv" style="position: absolute"></div>
+      </div>
+      <div class="code">
+        <pre class="prettyprint" id="textarea">
+
+        </pre>
+        <div class="error" id="error">
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <xml id="toolbox" style="display: none">
+    <block type="walk_up">
+      <value name="STEP">
+        <block type="steps">
+          <field name="NUM">1</field>
+        </block>
+      </value>
+    </block>
+    <block type="walk_right">
+      <value name="STEP">
+        <block type="steps">
+          <field name="NUM">1</field>
+        </block>
+      </value>
+    </block>
+    <block type="walk_down">
+      <value name="STEP">
+        <block type="steps">
+          <field name="NUM">1</field>
+        </block>
+      </value>
+    </block>
+    <block type="walk_left">
+      <value name="STEP">
+        <block type="steps">
+          <field name="NUM">1</field>
+        </block>
+      </value>
+    </block>
+  </xml>
+  <xml id="startBlocks" style="display: none">
+    <block type="start" inline="false" x="20" y="20"></block>
+  </xml>
+</body>
+<script src="src/a1/define.blockly.js"></script>
+<script src="src/a1/blockly.watch.js"></script>
+<script src="src/a1/crafty.a1.js"></script>
+</html>

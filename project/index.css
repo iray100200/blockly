@@ -1,0 +1,100 @@
+body {
+  margin: 0;
+  font-size: 14px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.root {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.canvas-container {
+  width: 320px;
+}
+
+.canvas-container canvas {
+  height: 320px;
+}
+
+.blockly {
+  height: 100vh;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+#blocklyArea {
+  width: 100%;
+  flex: 1;
+}
+
+.head {
+  height: 32px;
+}
+
+.code {
+  height: 30vh;
+  width: 100%;
+  background: #333;
+  overflow: auto;
+  display: flex;
+}
+
+.code pre {
+  width: 70%;
+  border: 0!important;
+  font-family: 'consolas';
+  margin: 12px;
+}
+
+.code .error {
+  flex: 1;
+  background: #444;
+  padding: 12px;
+  color: #e30;
+}
+
+.gradient {
+  background-image: -webkit-gradient(linear,
+    0 0, 100% 100%,
+    color-stop(.25, rgba(255, 255, 255, .2)), 
+    color-stop(.25, transparent),
+    color-stop(.5, transparent), 
+    color-stop(.5, rgba(255, 255, 255, .2)),
+    color-stop(.75, rgba(255, 255, 255, .2)), 
+    color-stop(.75, transparent),
+    to(transparent));
+  background-color: #ace;
+  background-size: 5px 5px;
+  border-bottom: 1px solid #ace;
+  box-shadow: 0 0 1px #ace;
+}
+
+button {
+  border: 0;
+  padding: 8px 20px;
+  line-height: 1.2;
+  color: #fff;
+  background: #f47920;
+  border-radius: 4px;
+  outline: none;
+  cursor: pointer;
+}
+
+.exec {
+  text-align: center;
+}
+
+.exec button {
+  margin-top: 20px;
+}
+
+#rerun {
+  margin-left: 8px;
+}
